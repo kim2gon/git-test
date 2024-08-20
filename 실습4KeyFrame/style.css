@@ -5,3 +5,174 @@
 	- 센터정렬하면서 중앙보다 살짝 더 아래 위치하게 해주세요.
 
 */
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #a8a8a8;
+}
+
+.container {
+	display: inline-block;
+	margin: 0 auto;
+	left: 50%;
+	top: 100px;
+	position: absolute;
+	animation: fly 5s ease-out infinite normal;
+	animation-delay: 1s;
+}
+
+.body {
+	position: relative;
+	width: 200px;
+	height: 250px;
+	background: white;
+	border-top-left-radius: 40%;
+	border-top-right-radius: 40%;
+	border-bottom-left-radius: 15%;
+	border-bottom-right-radius: 15%;
+}
+.eye {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background: black;
+	left: 50px;
+	top: -170px;
+	animation: drop 1s infinite linear;
+	animation-delay: 1s;
+}
+.eye2 {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background: black;
+	left: 120px;
+	top: -200px;
+	/* animation: drop 1s infinite linear; */
+}
+.wing {
+	position: relative;
+	width: 150px;
+	height: 200px;
+	background: orange;
+	border-top-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border-bottom: 10px solid yellow;
+	right: 150px;
+	top: -220px;
+}
+.wing2 {
+	position: relative;
+	width: 150px;
+	height: 200px;
+	background: orange;
+	border-top-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+	border-bottom: 10px solid yellow;
+	left: 200px;
+	top: -430px;
+}
+.hair {
+	position: relative;
+	width: 40px;
+	height: 100px;
+	background: green;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	border-right: 5px solid white;
+	border-top: 5px solid white;
+	left: 80px;
+	top: -800px;
+	z-index: 1;
+	/* animation: rotate 1s infinite linear; */
+}
+.hair2 {
+	position: relative;
+	width: 40px;
+	height: 100px;
+	background: yellow;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	border-right: 5px solid pink;
+	border-top: 5px solid pink;
+	transform: rotate(-30deg);
+	left: 30px;
+	top: -905px;
+	z-index: 2;
+}
+.hair3 {
+	position: relative;
+	width: 40px;
+	height: 100px;
+	background: pink;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	border-right: 5px solid yellow;
+	border-top: 5px solid yellow;
+	transform: rotate(30deg);
+	left: 130px;
+	top: -1010px;
+}
+.tail {
+	position: relative;
+	width: 50px;
+	height: 100px;
+	background: red;
+	left: 75px;
+	top: -795px;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	/* animation: drop2 10s linear; */
+}
+.mouth {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	background: orange;
+	border-top-left-radius: 100%;
+	transform: rotate(45deg);
+	left: 85px;
+	top: -1000px;
+}
+
+@keyframes fly {
+	0% {
+		/* transform: translate(0%,0%); */
+		margin-top: 100%;
+	}
+	100% {
+		/* transform: translate(0%,-100%); */
+		margin-top: 0%;
+	}
+}
+
+@keyframes drop {
+	0% {
+		/* transform: translate(0%,0%); */
+		top: -170px;
+	}
+	100% {
+		/* transform: translate(0%,100%); */
+		top: 500px;
+	}
+}@keyframes drop2 {
+	0% {
+		/* transform: translate(0%,0%); */
+	}
+	100% {
+		/* transform: translate(0%,100%); */
+	}
+}
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
